@@ -433,4 +433,4 @@ Crie fixtures para diferentes tipos de usuários (válido, inválido, incompleto
 
 ---
 
-**💡 Dica para Professores**: Este projeto serve como base completa para ensinar automação de testes, cobrindo desde conceitos básicos até práticas avançadas de BDD e relatórios. Use os exercícios propostos para fixar o aprendizado!
+**💡 Obs**: Este projeto serve como base completa para ensinar automação de testes, cobrindo desde conceitos básicos até práticas avançadas de BDD e relatórios. Use os exercícios propostos para fixar o aprendizado!
