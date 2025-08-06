@@ -1,0 +1,22 @@
+# Cypress generated files
+cypress/videos/
+cypress/screenshots/
+
+# Allure files
+allure-results/
+allure-report/
+
+# Node.js dependencies
+node_modules/
+
+# Environment variables
+.env
+
+# IDE files
+.idea/
+.vscode/
+*.sublime-*
+
+# OS generated files
+.DS_Store
+Thumb.db
