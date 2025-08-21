@@ -3,44 +3,10 @@
 
 ### 1. **BDD com Cucumber**
 
-**Arquivo Feature** (`cypress/e2e/features/login.feature`):
-```gherkin
-Feature: Login no Kabum
-
-  Scenario: Realizar login com sucesso
-    Given que eu estou na página de login do Kabum
-    When eu preencho o campo de email com "seu-email@dominio.com" e o campo de senha com "sua-senha"
-    And eu clico no botão de login
-    Then deve ser apresentada a mensagem de erro "E-mail, CPF/CNPJ ou senha incorretos."
-```
 
 ### 2. **Step Definitions**
 
 **Implementação dos Passos** (`cypress/e2e/step_definitions/login.js`):
-```javascript
-import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
-import LoginPage from '../pages/loginPage';
-
-const loginPage = new LoginPage();
-
-Given("que eu estou na página de login do Kabum", () => {
-  cy.visit('/');
-});
-
-When('eu preencho o campo de email com {string} e o campo de senha com {string}', (email, password) => {
-  loginPage.clickPopUp();
-  loginPage.fillEmailBase(email);
-  loginPage.fillPassword(password);
-});
-
-When('eu clico no botão de login', () => {
-  loginPage.clickLoginButton();
-});
-
-Then('deve ser apresentada a mensagem de erro {string}', (text) => {
-  loginPage.dadosInvalidosVisivelLogin(text);
-});
-```
 
 ### 3. **Page Object Model (POM)**
 
@@ -432,5 +398,3 @@ Crie uma nova Page Object para a página de cadastro seguindo o padrão do proje
 Crie fixtures para diferentes tipos de usuários (válido, inválido, incompleto).
 
 ---
-
-**💡 Obs**: Este projeto serve como base completa para ensinar automação de testes, cobrindo desde conceitos básicos até práticas avançadas de BDD e relatórios. Use os exercícios propostos para fixar o aprendizado!

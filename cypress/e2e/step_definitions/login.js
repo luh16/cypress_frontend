@@ -1,15 +1,49 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
 import LoginPage from '../pages/loginPage';
+import LoginPageQaPratice from '../pages/loginQaPratice';
+import MenuPage from '../pages/menuPage';
+
 const loginPage = new LoginPage
+const loginPageQaPratice = new LoginPageQaPratice
+const menuPage = new MenuPage
 
 
 
 
-Given("que eu estou na página de login do Kabum", () => {
+Given("que acesso o site QA Pratice", () => {
     
   cy.visit('/'); // A URL de login do Kabum!
+  menuPage.clicarMenuForms()
+  loginPageQaPratice.clickMenuLogin()
+
 
 });
+
+When('eu preencho os dados para cadastro', () => {
+  loginPageQaPratice.preencherPrimeiroNome('Fulano')
+  loginPageQaPratice.preencherUltimoNome('Silva')
+  loginPageQaPratice.selecionarRegiaoRegister('Brazil')
+  loginPageQaPratice.preencherNumeroTelefone('11999999999')
+  loginPageQaPratice.preencherEmail('fulano.silva@example.com')
+  loginPageQaPratice.preencherSenha('Abc@1234')
+  loginPageQaPratice.clickAceitarTermos()
+
+});
+
+
+When('eu clico no botão registrar', () => {
+  loginPageQaPratice.clicarEmRegistrar()
+});
+
+Then('deve ser possivel cadastrar usuario com sucesso', () => {
+  loginPageQaPratice.cadastroCriadoComSucesso('The account has been successfully created!')
+
+
+});
+
+
+
+
 
 
 When('eu preencho o campo de email com {string} e o campo de senha com {string}', (email, password) => {

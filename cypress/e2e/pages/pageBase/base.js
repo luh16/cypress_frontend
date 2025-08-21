@@ -25,5 +25,17 @@ export default class PageBase {
         cy.contains(element).should('be.visible')
     }
 
+     visibleContainsAlert(element, text) { 
+        element()
+        .should('contain.text', text, { timeout: 15000 })
+        if (Cypress.env('saveScreenshot')) { cy.screenshot('visible element: ' + element) }
+    } 
+    
+
+    select_countries_dropdown_menu_OP(element, text) {
+        element().select(text)
+        if (Cypress.env('saveScreenshot')) { cy.screenshot('country selected: ' + element) }
+    }
+
 
 }

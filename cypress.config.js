@@ -5,7 +5,7 @@ const { createEsbuildPlugin } = require("@badeball/cypress-cucumber-preprocessor
 const allureWriter = require('@shelex/cypress-allure-plugin/writer');
 
 module.exports = defineConfig({
-  defaultCommandTimeout: 30000,
+  defaultCommandTimeout: 10000,
   e2e: {
     async setupNodeEvents(on, config) {
       // ✅ configura o preprocessor
@@ -31,7 +31,7 @@ module.exports = defineConfig({
 
     specPattern: "cypress/e2e/**/*.feature",
     supportFile: "cypress/support/e2e.js",
-    baseUrl: "https://www.kabum.com.br/login",
+    baseUrl: "https://qa-practice.netlify.app/",
     chromeWebSecurity: false,
   },
 });
