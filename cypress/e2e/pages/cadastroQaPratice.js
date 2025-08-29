@@ -1,9 +1,9 @@
 require('cypress-xpath');
 import PageBase from './pageBase/base';
 
-export default class LoginPage extends PageBase {
+export default class CadastroPage extends PageBase {
     elements = {
-      menuLogin:    () => cy.get('#register'),
+      
       firstName:    () => cy.get('#firstName'),
       lastName:     () => cy.get('#lastName'),
       phone:        () => cy.get('#phone'),
@@ -19,9 +19,7 @@ export default class LoginPage extends PageBase {
 
     }
   
-     clickMenuLogin() {
-      this.elements.menuLogin().click()
-    }
+   
 
     preencherPrimeiroNome(text) {
       this.elements.firstName().type(text)

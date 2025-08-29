@@ -1,42 +1,43 @@
 import { Given, When, Then } from '@badeball/cypress-cucumber-preprocessor';
-import LoginPage from '../pages/loginPage';
-import LoginPageQaPratice from '../pages/loginQaPratice';
+import CadastroPage from '../pages/cadastroQaPratice';
+
 import MenuPage from '../pages/menuPage';
 
-const loginPage = new LoginPage
-const loginPageQaPratice = new LoginPageQaPratice
-const menuPage = new MenuPage
+//instanciando as classes
+const cadastroPage = new CadastroPage()
+
+const menuPage = new MenuPage()
 
 
 
 
-Given("que acesso o site QA Pratice", () => {
+Given("que acesso o site QA Pratice forms", () => {
     
-  cy.visit('/'); // A URL de login do Kabum!
+  cy.visit('/');
   menuPage.clicarMenuForms()
-  loginPageQaPratice.clickMenuLogin()
+  menuPage.clickMenuRegister()
 
 
 });
 
 When('eu preencho os dados para cadastro', () => {
-  loginPageQaPratice.preencherPrimeiroNome('Fulano')
-  loginPageQaPratice.preencherUltimoNome('Silva')
-  loginPageQaPratice.selecionarRegiaoRegister('Brazil')
-  loginPageQaPratice.preencherNumeroTelefone('11999999999')
-  loginPageQaPratice.preencherEmail('fulano.silva@example.com')
-  loginPageQaPratice.preencherSenha('Abc@1234')
-  loginPageQaPratice.clickAceitarTermos()
+  cadastroPage.preencherPrimeiroNome('Fulano')
+  cadastroPage.preencherUltimoNome('Silva')
+  cadastroPage.selecionarRegiaoRegister('Brazil')
+  cadastroPage.preencherNumeroTelefone('11999999999')
+  cadastroPage.preencherEmail('fulano.silva@example.com')
+  cadastroPage.preencherSenha('Abc@1234')
+  cadastroPage.clickAceitarTermos()
 
 });
 
 
 When('eu clico no botão registrar', () => {
-  loginPageQaPratice.clicarEmRegistrar()
+  cadastroPage.clicarEmRegistrar()
 });
 
 Then('deve ser possivel cadastrar usuario com sucesso', () => {
-  loginPageQaPratice.cadastroCriadoComSucesso('The account has been successfully created!')
+  cadastroPage.cadastroCriadoComSucesso('The account has been successfully created!')
 
 
 });

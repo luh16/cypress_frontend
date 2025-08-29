@@ -26,8 +26,7 @@ export default class PageBase {
     }
 
      visibleContainsAlert(element, text) { 
-        element()
-        .should('contain.text', text, { timeout: 15000 })
+        element().should('contain.text', text, { timeout: 15000 })
         if (Cypress.env('saveScreenshot')) { cy.screenshot('visible element: ' + element) }
     } 
     
@@ -37,5 +36,11 @@ export default class PageBase {
         if (Cypress.env('saveScreenshot')) { cy.screenshot('country selected: ' + element) }
     }
 
+
+    // Adicionar este método na PageBase
+sendKeysOrClear(element, text) {
+  element().clear();               // Sempre limpa primeiro
+  if (text) element().type(text); // Só digita se tem texto
+}
 
 }

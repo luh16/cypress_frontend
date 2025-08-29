@@ -24,6 +24,7 @@ module.exports = defineConfig({
     },
 
    env: {
+  tags: "@teste", // Executar apenas os cenários com a tag 
   allure: true,
   allureReuseAfterSpec: true,
 },
