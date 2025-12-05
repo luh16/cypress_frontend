@@ -32,7 +32,7 @@ module.exports = defineConfig({
 
     specPattern: "cypress/e2e/**/*.feature",
     supportFile: "cypress/support/e2e.js",
-    baseUrl: "https://qa-practice.netlify.app/",
+    baseUrl: "https://hml5-login.smiles.com.br/authorize?client_id=GZx2w3Cm3GlhQZoKq26ZrmKZE61GB3RC&redirect_uri=https%3A%2F%2Fportal-uat5.smiles.com.br%2Flogincb%3Fdest%3D&audience=https://smiles.api&scope=openid%20profile%20email&response_type=code&prompt=login",
     chromeWebSecurity: false,
   },
 });

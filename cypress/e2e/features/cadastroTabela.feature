@@ -26,7 +26,7 @@ Feature: Validar login com sucesso no QA pratice
       | Tiago | Duarte   | 99999999999 |         invalid    |    pass    |
       
 
-@teste
+
   Scenario Outline: Validar campos obrigatorios PassWord
     Given que estou na página de cadastro
     When preencho todos os campos obrigatórios '<name>' '<lastName>' '<phoneNumber>' '<emailAddress>' '<pass>'
