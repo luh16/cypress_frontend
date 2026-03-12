@@ -1,6 +1,6 @@
 Feature: Validar Cadastro com sucesso no QA pratice
 
-
+@teste
   Scenario: Realizar cadastro com sucesso
     Given que acesso o site QA Pratice forms
     When eu preencho os dados para cadastro

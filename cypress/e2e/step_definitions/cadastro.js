@@ -17,7 +17,6 @@ Given("que acesso o site QA Pratice forms", () => {
   menuPage.clicarMenuForms()
   menuPage.clickMenuRegister()
 
-
 });
 
 When('eu preencho os dados para cadastro', () => {
