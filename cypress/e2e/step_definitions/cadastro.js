@@ -11,11 +11,13 @@ const menuPage = new MenuPage()
 
 
 
-Given("que acesso o site QA Pratice forms", () => {
+
+Given("que acesso o menu Login", () => {
     
   cy.visit('/');
+
   menuPage.clicarMenuForms()
-  menuPage.clickMenuRegister()
+  menuPage.clickMenuLogin()
 
 });
 
