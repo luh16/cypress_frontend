@@ -9,6 +9,14 @@ const cadastroPage = new CadastroPage()
 const menuPage = new MenuPage()
 
 
+Given("que acesso na página de cadastro", () => {
+    
+  cy.visit('/');
+
+  menuPage.clicarMenuForms()
+  menuPage.clickMenuRegister()
+
+});
 
 
 
