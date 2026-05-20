@@ -3,18 +3,17 @@ import PageBase from './pageBase/base';
 export default class cadastroTabelaPage extends PageBase {
 
     elements = {
-        formRegister: () => cy.contains('Register Form'),
-        firstName: () => cy.get('#firstName'),
-        lastName: () => cy.get('#lastName'),
-        phone: () => cy.get('#phone'),
-        email: () => cy.get('#emailAddress'),
-        password: () => cy.get('#password'),
-        aceitarTermos: () => cy.get('#exampleCheck1'),
-        inputCheckBox: () => cy.get('#registerBtn'),
-        textCreated: () => cy.contains('The account has been successfully created!'),
-
-        invalidEmail: () => cy.get('#emailAddress:valid'),
-        invalidPassword: () => cy.get('#password:invalid'),
+        formRegister:                       () => cy.contains('Register Form'),
+        firstName:                          () => cy.get('#firstName'),
+        lastName:                           () => cy.get('#lastName'),
+        phone:                              () => cy.get('#phone'),
+        email:                              () => cy.get('#emailAddress'),
+        password:                           () => cy.get('#password'),
+        aceitarTermos:                      () => cy.get('#exampleCheck1'),
+        inputCheckBox:                      () => cy.get('#registerBtn'),
+        textCreated:                        () => cy.contains('The account has been successfully created!'),
+        invalidEmail:                       () => cy.get('#emailAddress:valid'),
+        invalidPassword:                    () => cy.get('#password:invalid'),
         //:valid e :invalid são propiedades do CSS que mudam de acordo com uma com uma condição é igual o :houver
     }
 

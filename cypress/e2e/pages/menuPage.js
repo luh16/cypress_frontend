@@ -7,8 +7,17 @@ export default class MenuPage extends PageBase {
       menuRegister:    () => cy.get('#register'),
       menuLogin:      () => cy.get('#login'),
 
+     
+
     }
   
+
+
+
+
+
+
+    
 
     clicarMenuForms() {
 
@@ -26,8 +35,6 @@ export default class MenuPage extends PageBase {
     }
 
 
-
-    
     
   }
   

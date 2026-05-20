@@ -30,13 +30,13 @@ Given("que acesso o menu Login", () => {
 });
 
 When('eu preencho os dados para cadastro', () => {
-  cadastroPage.preencherPrimeiroNome('Fulano')
-  cadastroPage.preencherUltimoNome('Silva')
-  cadastroPage.selecionarRegiaoRegister('Brazil')
-  cadastroPage.preencherNumeroTelefone('11999999999')
-  cadastroPage.preencherEmail('fulano.silva@example.com')
-  cadastroPage.preencherSenha('Abc@1234')
-  cadastroPage.clickAceitarTermos()
+  
+  cadastroPage.preencherPrimeiroNome("teste")
+
+
+
+
+
 
 });
 

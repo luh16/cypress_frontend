@@ -70,6 +70,3 @@ export default class CadastroPage extends PageBase {
     
     
   }
-  
-  //
-  
